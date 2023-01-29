@@ -26,7 +26,7 @@ const ExperienceCard: FunctionComponent<{ experience: Experience }> = ({
 				<div className="flex justify-between mb-2">
 					<div>
 						<h5 className="font-bold">{title}</h5>
-						<a href={company_url} target="_blank">
+						<a href={company_url} target="_blank" rel="noreferrer">
 							<h6 className="">{company}</h6>
 						</a>
 					</div>
