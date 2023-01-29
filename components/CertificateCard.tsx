@@ -8,7 +8,7 @@ const CertificateCard: FunctionComponent<{
 	return (
 		<div>
 			<div className="flex justify-center">
-				<Image
+				<img
 					src={logo_path}
 					alt={title}
 					className="cursor-pointer transition duration-150 ease-in-out"

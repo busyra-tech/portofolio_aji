@@ -12,7 +12,7 @@ const ProjectCard: FunctionComponent<{
 
 	return (
 		<div>
-			<Image
+			<img
 				src={image_path}
 				alt={name}
 				className="cursor-pointer"
@@ -24,7 +24,7 @@ const ProjectCard: FunctionComponent<{
 
 			{showDetail && (
 				<div className="absolute left-0 z-10 grid w-full h-auto p-10 text-black bg-gray-100 md:grid-cols-2 gap-x-12 dark:text-white dark:bg-dark-100">
-					<Image
+					<img
 						className={deployed_url ? "cursor-pointer" : ""}
 						src={image_path}
 						onClick={() => deployed_url && window.open(deployed_url, "_blank")}

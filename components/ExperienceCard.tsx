@@ -21,7 +21,7 @@ const ExperienceCard: FunctionComponent<{ experience: Experience }> = ({
 
 	return (
 		<div className="flex items-center p-2 space-x-4 ">
-			<Image src={logo_path} alt={title} height="150" width="150" />
+			<img src={logo_path} alt={title} height="150" width="150" />
 			<div className="flex-col">
 				<div className="flex justify-between mb-2">
 					<div>

@@ -21,7 +21,7 @@ const Sidebar = () => {
 
 	return (
 		<>
-			<Image
+			<img
 				src="/images/aji_nobg.png"
 				alt="avatar"
 				className=" mx-auto rounded-full "
