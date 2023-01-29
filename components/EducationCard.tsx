@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FunctionComponent } from "react";
 import { Education } from "types";
 
@@ -19,7 +20,7 @@ const EducationCard: FunctionComponent<{ education: Education }> = ({
 
 	return (
 		<div className="flex flex-col md:flex-row items-center p-2 space-x-4 ">
-			<img
+			<Image
 				src={logo_path}
 				alt={universitas}
 				className="cursor-pointer transition duration-150 ease-in-out"

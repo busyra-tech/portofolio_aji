@@ -10,6 +10,7 @@ import { GoLocation } from "react-icons/go";
 import { useTheme } from "next-themes";
 import { FaMoon, FaSun } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
+import Image from "next/image";
 
 const Sidebar = () => {
 	const { theme, setTheme } = useTheme();
@@ -20,7 +21,7 @@ const Sidebar = () => {
 
 	return (
 		<>
-			<img
+			<Image
 				src="/images/aji_nobg.png"
 				alt="avatar"
 				className=" mx-auto rounded-full "

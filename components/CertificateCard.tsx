@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FunctionComponent } from "react";
 import { Certification } from "types";
 
@@ -7,7 +8,7 @@ const CertificateCard: FunctionComponent<{
 	return (
 		<div>
 			<div className="flex justify-center">
-				<img
+				<Image
 					src={logo_path}
 					alt={title}
 					className="cursor-pointer transition duration-150 ease-in-out"
