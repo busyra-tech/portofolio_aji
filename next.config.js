@@ -1,5 +1,5 @@
 module.exports = {
-	// reactStrictMode: true,
+	reactStrictMode: true,
 	env: {
 		NEXT_MODE: process.env.NEXT_MODE,
 	},
