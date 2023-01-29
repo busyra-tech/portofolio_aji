@@ -1,5 +1,4 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
 	// reactStrictMode: true,
 	env: {
 		NEXT_MODE: process.env.NEXT_MODE,
@@ -11,5 +10,3 @@ const nextConfig = {
 		domains: ["ajidwisaputra.com"],
 	},
 };
-
-module.exports = nextConfig;
