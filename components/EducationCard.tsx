@@ -31,7 +31,7 @@ const EducationCard: FunctionComponent<{ education: Education }> = ({
 				width="100"
 			/>
 			<div className="flex-col">
-				<div className="flex justify-between mb-2">
+				<div className="md:flex md:justify-between mb-2">
 					<div>
 						<h5 className="font-bold">{universitas}</h5>
 						<h6 className="">{jurusan}</h6>

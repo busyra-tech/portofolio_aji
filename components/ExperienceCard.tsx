@@ -20,10 +20,10 @@ const ExperienceCard: FunctionComponent<{ experience: Experience }> = ({
 	}
 
 	return (
-		<div className="flex items-center p-2 space-x-4 ">
+		<div className="flex flex-col md:flex-row items-center p-2 space-x-4 ">
 			<img src={logo_path} alt={title} height="150" width="150" />
-			<div className="flex-col">
-				<div className="flex justify-between mb-2">
+			<div className="">
+				<div className="md:flex md:justify-between mb-2">
 					<div>
 						<h5 className="font-bold">{title}</h5>
 						<a href={company_url} target="_blank" rel="noreferrer">
