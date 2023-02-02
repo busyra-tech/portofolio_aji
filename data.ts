@@ -259,7 +259,7 @@ export const projects: IProject[] = [
       "Sidas is a monitoring application for office performance control services, employees, ATMs, etc.",
     image_path: "/images/project/project_bankbtn.png",
     deployed_url: null,
-    category: ["mobile"],
+    category: ["Flutter","Adonis Js"],
     techs: [
       {
         Icon: SiFlutter,
@@ -277,7 +277,7 @@ export const projects: IProject[] = [
       "application for management employee on Prosecutor of the Republic of Indonesia.",
     image_path: "/images/project/project_kejagungri.png",
     deployed_url: null,
-    category: ["web"],
+    category: ["Laravel","React Js"],
     techs: [
       {
         Icon: SiLaravel,
@@ -295,7 +295,7 @@ export const projects: IProject[] = [
       "Web app or platfrom flexible benefit for employee",
     image_path: "/images/project/project_lexgo.png",
     deployed_url: null,
-    category: ["web"],
+    category: ["Laravel","Vue Js"],
     techs: [
       {
         Icon: SiLaravel,
@@ -313,7 +313,7 @@ export const projects: IProject[] = [
       "Web & Mobile app or application for business process company insurance brokers.",
     image_path: "/images/project/project_brix.png",
     deployed_url: "https://brix.integra.co.id",
-    category: ["web","mobile"],
+    category: ["Laravel","React Js","Flutter"],
     techs: [
       {
         Icon: SiLaravel,
@@ -334,12 +334,30 @@ export const projects: IProject[] = [
     ],
   },
   { 
+    name: "e-commerce Fits ID",
+    description:
+      "Fits ID is e-commerce digital platform wellness",
+    image_path: "/images/project/project_fits.png",
+    deployed_url: "https://fits.id",
+    category: ["Laravel","Next Js"],
+    techs: [
+      {
+        Icon: SiLaravel,
+        name: "Laravel",
+      },
+      {
+        Icon: SiNextdotjs,
+        name: "Next JS",
+      },
+    ],
+  },
+  { 
     name: "e-commerce Ohmura",
     description:
       "Ohmura is e-commerce digital platform where every product has a promo",
     image_path: "/images/project/project_ohmura.png",
     deployed_url: "https://www.ohmura.id",
-    category: ["web"],
+    category: ["Laravel","Nuxt Js"],
     techs: [
       {
         Icon: SiLaravel,
@@ -357,7 +375,7 @@ export const projects: IProject[] = [
       "Mobile App is an online shopping for sandbeach products through a mobile app.",
     image_path: "/images/project/project_sandbeach.png",
     deployed_url: null,
-    category: ["mobile"],
+    category: ["Flutter"],
     techs: [
       {
         Icon: SiFlutter,
@@ -375,11 +393,11 @@ export const projects: IProject[] = [
       "Heylawedu is a digital platform for studying law.",
     image_path: "/images/project/project_heylawedu.png",
     deployed_url: "https://heylawedu.id",
-    category: ["web"],
+    category: ["Express Js","Nuxt Js"],
     techs: [
       {
-        Icon: SiLaravel,
-        name: "Laravel",
+        Icon: SiNodedotjs,
+        name: "Express Js",
       },
       {
         Icon: SiNuxtdotjs,
@@ -393,7 +411,7 @@ export const projects: IProject[] = [
       "Heylaw mobile is a digital platform for studying law and mitra heylaw and etc",
     image_path: "/images/project/project_heylaw_mobile.png",
     deployed_url: "https://heylaw.id",
-    category: ["mobile"],
+    category: ["Flutter"],
     techs: [
       {
         Icon: SiFlutter,
@@ -411,7 +429,7 @@ export const projects: IProject[] = [
       "web app or portal for creating advertisements",
     image_path: "/images/project/project_myads_telkomsel.png",
     deployed_url: "https://myads.telkomsel.com",
-    category: ["web"],
+    category: ["Next Js"],
     techs: [
       {
         Icon: SiNextdotjs,
@@ -425,7 +443,7 @@ export const projects: IProject[] = [
       "web app or portal for creating payment transaction in government in Malaysia",
     image_path: "/images/project/project_mymbsa.png",
     deployed_url: "https://www.mymbsa.gov.my",
-    category: ["web"],
+    category: ["Laravel","React Js"],
     techs: [
       {
         Icon: SiLaravel,
@@ -443,7 +461,7 @@ export const projects: IProject[] = [
       "Web app or application for business process company insurance brokers.",
     image_path: "/images/project/project_astakanti.png",
     deployed_url: "https://siakib.astakanti.co.id",
-    category: ["web"],
+    category: ["Laravel","Next Js"],
     techs: [
       {
         Icon: SiLaravel,

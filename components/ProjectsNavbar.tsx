@@ -23,8 +23,14 @@ const ProjectsNavbar: FunctionComponent<{
 	return (
 		<div className="flex px-3 py-2 space-x-3 overflow-x-auto list-none">
 			<NavItem value="all" {...props} />
-			<NavItem value="web" {...props} />
-			<NavItem value="mobile" {...props} />
+			<NavItem value="Laravel" {...props} />
+			<NavItem value="Adonis Js" {...props} />
+			<NavItem value="Express Js" {...props} />
+			<NavItem value="React Js" {...props} />
+			<NavItem value="Next Js" {...props} />
+			<NavItem value="Vue Js" {...props} />
+			<NavItem value="Nuxt Js" {...props} />
+			<NavItem value="Flutter" {...props} />
 		</div>
 	);
 };

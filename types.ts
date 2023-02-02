@@ -52,4 +52,4 @@ export interface Tech {
   name: string;
 }
 
-export type Category = "web" | "mobile" ;
+export type Category = "Laravel"|"Adonis Js"|"Express Js"|"Nuxt Js"|"Next Js"|"Vue Js"|"React Js"|"Flutter" ;
