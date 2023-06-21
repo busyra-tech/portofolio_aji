@@ -334,6 +334,32 @@ export const projects: IProject[] = [
     ],
   },
   { 
+    name: "BRIX",
+    description:
+      "Web & Mobile app or application for manage HR operations, from the employee database system.",
+    image_path: "/images/project/project_idea.png",
+    deployed_url: null,
+    category: ["Laravel","Next Js","Flutter"],
+    techs: [
+      {
+        Icon: SiLaravel,
+        name: "Laravel",
+      },
+      {
+        Icon: SiNextdotjs,
+        name: "Next JS",
+      },
+      {
+        Icon: SiFlutter,
+        name: "Flutter",
+      },
+      {
+        Icon: SiJenkins,
+        name: "Jenkins",
+      },
+    ],
+  },
+  { 
     name: "e-commerce Fits ID",
     description:
       "Fits ID is e-commerce digital platform wellness",
