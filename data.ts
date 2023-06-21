@@ -334,7 +334,7 @@ export const projects: IProject[] = [
     ],
   },
   { 
-    name: "BRIX",
+    name: "iDea",
     description:
       "Web & Mobile app or application for manage HR operations, from the employee database system.",
     image_path: "/images/project/project_idea.png",
