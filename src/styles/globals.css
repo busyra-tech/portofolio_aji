@@ -2,8 +2,285 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Base Styles */
+* {
+  @apply transition-colors duration-200;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
-   font-family: sans-serif;
-   color: #354358;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  @apply bg-white text-gray-900 dark:bg-dark-900 dark:text-gray-50;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-dark-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-primary-500 to-accent-500 rounded-full hover:shadow-lg;
+}
+
+/* Selection styles */
+::selection {
+  @apply bg-primary-500 text-white;
+}
+
+::-moz-selection {
+  @apply bg-primary-500 text-white;
+}
+
+/* Utility classes */
+@layer components {
+  /* Cards */
+  .card {
+    @apply bg-white dark:bg-dark-700 rounded-xl shadow-card dark:shadow-card-dark p-6 hover:shadow-lg transition-shadow duration-300 border border-gray-100 dark:border-dark-600;
+  }
+
+  .card-elevated {
+    @apply bg-white dark:bg-dark-700 rounded-xl shadow-lg dark:shadow-card-dark p-6 hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-dark-600 hover:-translate-y-1;
+  }
+
+  .card-gradient {
+    @apply bg-gradient-to-br from-primary-500 to-secondary-600 text-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300;
+  }
+
+  /* Buttons */
+  .btn-base {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-dark-800;
+  }
+
+  .btn-primary {
+    @apply btn-base bg-gradient-to-r from-primary-600 to-primary-500 text-white hover:shadow-lg hover:-translate-y-0.5 focus:ring-primary-400;
+  }
+
+  .btn-secondary {
+    @apply btn-base bg-gray-100 dark:bg-dark-600 text-gray-900 dark:text-white hover:bg-gray-200 dark:hover:bg-dark-500 focus:ring-gray-400;
+  }
+
+  .btn-accent {
+    @apply btn-base bg-gradient-to-r from-accent-500 to-accent-600 text-white hover:shadow-lg hover:-translate-y-0.5 focus:ring-accent-400;
+  }
+
+  .btn-ghost {
+    @apply btn-base text-primary-600 dark:text-accent-400 hover:bg-primary-50 dark:hover:bg-dark-600 focus:ring-primary-400;
+  }
+
+  .btn-sm {
+    @apply px-3 py-1.5 text-sm;
+  }
+
+  .btn-lg {
+    @apply px-6 py-3 text-lg;
+  }
+
+  /* Typography */
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 via-secondary-500 to-accent-500 bg-clip-text text-transparent animate-gradient-shift;
+  }
+
+  .heading-section {
+    @apply text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4;
+  }
+
+  .heading-subsection {
+    @apply text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3;
+  }
+
+  .text-muted {
+    @apply text-gray-600 dark:text-gray-400;
+  }
+
+  .link-hover {
+    @apply text-primary-600 dark:text-accent-400 hover:text-primary-700 dark:hover:text-accent-300 hover:underline transition-colors duration-200;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+  }
+
+  .badge-primary {
+    @apply badge bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300;
+  }
+
+  .badge-secondary {
+    @apply badge bg-secondary-100 dark:bg-secondary-900/30 text-secondary-700 dark:text-secondary-300;
+  }
+
+  .badge-accent {
+    @apply badge bg-accent-100 dark:bg-accent-900/30 text-accent-700 dark:text-accent-300;
+  }
+
+  .badge-success {
+    @apply badge bg-success-100 dark:bg-success-900/30 text-success-700 dark:text-success-300;
+  }
+
+  /* Dividers */
+  .divider {
+    @apply border-t border-gray-200 dark:border-dark-600;
+  }
+
+  .divider-gradient {
+    @apply h-1 bg-gradient-to-r from-primary-500 via-secondary-500 to-accent-500;
+  }
+
+  /* Sections */
+  .section {
+    @apply py-16 md:py-20 px-4 md:px-8 lg:px-12;
+  }
+
+  .section-wide {
+    @apply py-20 md:py-28 px-4 md:px-8 lg:px-12 max-w-7xl mx-auto;
+  }
+
+  /* Containers */
+  .container-custom {
+    @apply max-w-6xl mx-auto px-4 md:px-6 lg:px-8;
+  }
+
+  /* Grid */
+  .grid-auto {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8;
+  }
+
+  /* Overlay */
+  .overlay {
+    @apply absolute inset-0 bg-black/50 dark:bg-black/70 rounded-xl;
+  }
+
+  /* Glow effects */
+  .glow-primary {
+    @apply shadow-lg shadow-primary-500/20 dark:shadow-primary-500/10;
+  }
+
+  .glow-accent {
+    @apply shadow-lg shadow-accent-500/20 dark:shadow-accent-500/10;
+  }
+
+  /* Focus visible */
+  .focus-visible {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Apply animations */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+.slide-down {
+  animation: slideDown 0.5s ease-out;
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  .container-custom {
+    @apply px-3;
+  }
+
+  .section {
+    @apply py-8 px-3;
+  }
+
+  .heading-section {
+    @apply text-2xl;
+  }
+
+  .heading-subsection {
+    @apply text-xl;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Dark mode specific */
+@layer base {
+  @media (prefers-color-scheme: dark) {
+    body {
+      @apply bg-dark-900;
+    }
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none;
+  }
 }
 

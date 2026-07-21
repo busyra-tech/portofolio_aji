@@ -1,38 +1,193 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aji Dwi Saputra - Personal Portfolio Website
 
-## Getting Started
+A modern, responsive portfolio website showcasing software engineering experience, projects, and skills. Built with Next.js, React, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🌟 Features
+
+- **Modern Tech Stack**: Next.js 14, React 18, TypeScript 5, Tailwind CSS 3
+- **Dark Mode**: Seamless dark/light theme switching
+- **Responsive Design**: Mobile-first, fully responsive layout
+- **SEO Optimized**: Meta tags, OG tags, and structured data
+- **Accessibility**: ARIA labels, keyboard navigation, semantic HTML
+- **Performance**: Server-side rendering, optimized build
+- **Type Safe**: Strict TypeScript configuration
+- **Environment Variables**: Secure configuration management
+
+## 📋 Prerequisites
+
+- Node.js 16.x or higher
+- npm or yarn package manager
+
+## 🚀 Quick Start
+
+### 1. Clone or Download the Repository
+
+```bash
+cd portfolio
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Configure Environment Variables
+
+Create `.env.local` file and edit with your information:
+
+```env
+NEXT_PUBLIC_AUTHOR_NAME=Your Name
+NEXT_PUBLIC_AUTHOR_EMAIL=your.email@example.com
+NEXT_PUBLIC_AUTHOR_PHONE=+1 234 567 8900
+NEXT_PUBLIC_AUTHOR_LOCATION=City, Country
+NEXT_PUBLIC_GITHUB_URL=https://github.com/yourprofile
+NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/yourprofile
+```
+
+### 4. Development Server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### 5. Build for Production
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+npm run build
+npm start
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+portfolio/
+├── components/           # Reusable React components
+├── config/              # Application configuration
+├── lib/                 # Utility functions
+├── src/
+│   ├── pages/          # Next.js pages/routes
+│   ├── styles/         # Global CSS
+│   └── api/            # API routes
+├── public/             # Static assets
+├── data.ts             # Portfolio data
+├── types.ts            # TypeScript definitions
+└── package.json        # Dependencies
+```
 
-## Learn More
+## 🎨 Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Update Personal Information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Edit `config/site.ts` and `.env.local`:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```typescript
+// config/site.ts
+export const siteConfig = {
+  author: {
+    name: "Your Name",
+    email: "your.email@example.com",
+    location: "Your Location",
+  },
+};
+```
 
-## Deploy on Vercel
+### Add Projects
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit `data.ts` to add new projects to the portfolio.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Update Skills
+
+Modify the `languages` and `infra` arrays in `data.ts`.
+
+### Change Colors
+
+Edit `tailwind.config.js` to customize the color scheme.
+
+## 📱 Pages
+
+- **Home** (`/`) - About page with services
+- **Projects** (`/projects`) - Portfolio projects with filtering
+- **Skills** (`/skills`) - Technical skills with proficiency levels
+- **Experience** (`/experience`) - Work experience timeline
+- **Education** (`/education`) - Educational background and certifications
+
+## 🔧 Available Scripts
+
+```bash
+npm run dev           # Start development server
+npm run build         # Build for production
+npm run start         # Start production server
+npm run lint          # Run linting checks
+npm run type-check    # Check TypeScript types
+```
+
+## 🌐 Deployment
+
+### Vercel (Recommended)
+
+1. Push code to GitHub
+2. Import project in Vercel
+3. Set environment variables
+4. Deploy!
+
+### Other Platforms
+
+See [IMPROVEMENTS_GUIDE.md](./IMPROVEMENTS_GUIDE.md) for detailed deployment instructions.
+
+## 📚 Documentation
+
+- [REFACTORING_SUMMARY.md](./REFACTORING_SUMMARY.md) - Detailed refactoring changes
+- [IMPROVEMENTS_GUIDE.md](./IMPROVEMENTS_GUIDE.md) - Customization and deployment guide
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+
+## 🎯 Best Practices
+
+- Keep `data.ts` updated with latest information
+- Optimize images before adding
+- Test on mobile devices
+- Check SEO with Lighthouse
+- Monitor performance metrics
+- Keep dependencies updated
+
+## 🔒 Security
+
+- Never commit `.env.local` file
+- Use environment variables for sensitive data
+- Keep dependencies updated
+- Run `npm audit` regularly
+
+## 🐛 Troubleshooting
+
+**Port 3000 already in use:**
+```bash
+npm run dev -- -p 3001
+```
+
+**Cache issues:**
+```bash
+rm -rf .next node_modules
+npm install
+npm run build
+```
+
+## 📄 License
+
+This project is open source and available under the MIT License.
+
+## 🙏 Credits
+
+Built with:
+- [Next.js](https://nextjs.org) - React Framework
+- [Tailwind CSS](https://tailwindcss.com) - CSS Framework
+- [React Icons](https://react-icons.github.io) - Icon Library
+- [next-themes](https://github.com/pacocoursey/next-themes) - Theme Management
+
+---
+
+**Happy Coding! 🎉**
+
+For more information, check out the [project documentation](./IMPROVEMENTS_GUIDE.md).

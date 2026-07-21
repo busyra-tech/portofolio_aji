@@ -1,14 +1,16 @@
 import { useState } from "react";
+import Head from "next/head";
 import ProjectCard from "components/ProjectCard";
 import ProjectsNavbar from "components/ProjectsNavbar";
 import { projects as projectsData } from "data";
 import { Category } from "types";
+import { siteConfig } from "config/site";
 
 const Projects = () => {
 	const [projects, setProjects] = useState(projectsData);
 	const [active, setActive] = useState("all");
 
-	const handlerFilterCategory = (category: Category | "all") => {
+	const handleFilterCategory = (category: Category | "all") => {
 		if (category === "all") {
 			setProjects(projectsData);
 			setActive(category);
@@ -16,33 +18,62 @@ const Projects = () => {
 		}
 
 		const newArray = projectsData.filter((project) =>
-			project.category.includes(category)
+			project.category.includes(category),
 		);
 		setProjects(newArray);
 		setActive(category);
 	};
 
 	return (
-		<div className="flex flex-col flex-grow px-6 pt-1">
-			<h6 className="my-3 text-base font-medium">
-				My projects makes use of vast variety of latest technology tools. My
-				best experience is to create Data Science projects and deploy them to
-				web applications using cloud infrastructure.
-			</h6>
-			<ProjectsNavbar
-				handlerFilterCategory={handlerFilterCategory}
-				active={active}
-			/>
-			<div className="px-5 py-2 overflow-y-scroll" style={{ height: "65vh" }}>
-				<div className="relative grid grid-cols-12 gap-4 my-3">
-					{projects.map((project) => (
-						<div className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200" key={project.name}>
-							<ProjectCard project={project} key={project.name} />
-						</div>
-					))}
+		<>
+			<Head>
+				<title>
+					{siteConfig.pages.projects.title} | {siteConfig.name}
+				</title>
+				<meta
+					name="description"
+					content={siteConfig.pages.projects.description}
+				/>
+			</Head>
+
+			<section className="section-wide pt-40">
+				{/* Header */}
+				<div className="mb-16">
+					<h1 className="heading-section text-center mb-6">
+						Featured Projects
+					</h1>
+					<p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto text-center">
+						A collection of projects showcasing my expertise in full-stack
+						development, modern frameworks, and cloud technologies.
+					</p>
 				</div>
-			</div>
-		</div>
+
+				{/* Filter */}
+				<div className="mb-12">
+					<ProjectsNavbar
+						handlerFilterCategory={handleFilterCategory}
+						active={active}
+					/>
+				</div>
+
+				{/* Projects Grid */}
+				<div className="grid-auto">
+					{projects.length > 0 ? (
+						projects.map((project) => (
+							<div key={project.name} className="card-elevated">
+								<ProjectCard project={project} />
+							</div>
+						))
+					) : (
+						<div className="col-span-full text-center py-12">
+							<p className="text-gray-600 dark:text-gray-400">
+								No projects found in this category. Try selecting another.
+							</p>
+						</div>
+					)}
+				</div>
+			</section>
+		</>
 	);
 };
 

@@ -1,35 +1,78 @@
+import Head from "next/head";
+import HeroSection from "components/HeroSection";
 import ServiceCard from "components/ServiceCard";
 import { services } from "data";
-import { NextPage } from "next";
+import { siteConfig } from "config/site";
 
-const About: NextPage = () => {
+const Home = () => {
 	return (
-		<div className="flex flex-col flex-grow px-6 pt-1 ">
-			<h6 className="my-3 text-base font-medium">
-				A passionate individual who always thrive to work on end to end products
-				which develop sustainable and scalable social and technical systems to
-				create impact.
-			</h6>
-			<div
-				className="flex-grow p-4 mt-5 bg-gray-400 dark:bg-dark-100 "
-				style={{ marginLeft: "-1.5rem", marginRight: "-1.5rem" }}
-			>
-				<h4 className="my-3 text-xl font-semibold tracking-wide">
-					What I am doing
-				</h4>
-				<div className="grid gap-6 my-3 md:grid-cols-1">
-					{services.map((service) => (
-						<div
-							className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 md:col-span-1 "
-							key={service.title}
-						>
-							<ServiceCard service={service} />
-						</div>
-					))}
+		<>
+			<Head>
+				<title>
+					{siteConfig.pages.home.title} | {siteConfig.name}
+				</title>
+				<meta name="description" content={siteConfig.pages.home.description} />
+			</Head>
+
+			{/* Hero Section */}
+			<HeroSection />
+
+			{/* About Section */}
+			<section className="section-wide bg-white dark:bg-dark-900">
+				<div className="mb-16">
+					<h2 className="heading-section text-center mb-8">About Me</h2>
+					<p className="text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto text-center leading-relaxed">
+						I&apos;m a passionate software engineer with expertise in building
+						scalable, maintainable web and mobile applications. With a strong
+						foundation in full-stack development, I combine technical skills
+						with creative problem-solving to deliver solutions that make a real
+						impact.
+					</p>
 				</div>
-			</div>
-		</div>
+
+				{/* Services */}
+				<div>
+					<h3 className="heading-subsection text-center mb-12">What I Do</h3>
+					<div className="grid-auto">
+						{services.map((service) => (
+							<div key={service.title} className="card-elevated group">
+								<div className="flex items-start gap-4">
+									<div className="p-3 rounded-lg bg-gradient-to-br from-primary-100 to-accent-100 dark:from-primary-900/30 dark:to-accent-900/30 group-hover:shadow-lg transition-shadow">
+										<service.Icon className="w-6 h-6 text-primary-600 dark:text-accent-400" />
+									</div>
+									<div className="flex-1">
+										<h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+											{service.title}
+										</h4>
+										<p className="text-sm text-gray-600 dark:text-gray-400">
+											{service.about}
+										</p>
+									</div>
+								</div>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+
+			{/* CTA Section */}
+			<section className="section-wide bg-gradient-to-br from-primary-600 to-accent-600 dark:from-primary-700 dark:to-accent-700 text-white text-center">
+				<h2 className="heading-section text-white mb-6">
+					Ready to Work Together?
+				</h2>
+				<p className="text-lg mb-8 max-w-2xl mx-auto opacity-90">
+					Let&apos;s collaborate to bring your ideas to life. Whether you have a
+					project idea or just want to chat, I&apos;d love to hear from you.
+				</p>
+				<a
+					href={`mailto:${siteConfig.author.email}`}
+					className="inline-flex btn-base bg-white text-primary-600 hover:shadow-xl hover:-translate-y-1"
+				>
+					Get in Touch
+				</a>
+			</section>
+		</>
 	);
 };
 
-export default About;
+export default Home;

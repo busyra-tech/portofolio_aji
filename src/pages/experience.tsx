@@ -1,32 +1,39 @@
+import Head from "next/head";
 import ExperienceCard from "components/ExperienceCard";
 import { experiences } from "data";
+import { siteConfig } from "config/site";
 
 const Experience = () => {
 	return (
-		<div className="px-6 py-2">
-			<h6 className="my-3 text-base font-medium">
-				I’m a Programmer, I’ve 5 years experience in Web and Mobile Programming,
-				I’m fully able to develop application android in Kotlin, Flutter, Java,
-				and other application based on Client interest. In Web Application, I’m
-				using Javascript Framework ExpressJS, ReactJS, VueJS and PHP Framemwork
-				Laravel, CodeIgniter and kind of DBMS for SQL like MySQL, Postgress and
-				No SQL Firebase or MongoDb. I can work as a team, or individual to
-				develop system.
-			</h6>
-			<div
-				className="grid gap-6 my-3 md:grid-cols-1 overflow-y-scroll"
-				style={{ height: "55vh" }}
-			>
-				{experiences.map((experience) => (
-					<div
-						className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 md:col-span-1 "
-						key={experience.title}
-					>
-						<ExperienceCard experience={experience} />
-					</div>
-				))}
-			</div>
-		</div>
+		<>
+			<Head>
+				<title>
+					{siteConfig.pages.experience.title} | {siteConfig.name}
+				</title>
+				<meta
+					name="description"
+					content={siteConfig.pages.experience.description}
+				/>
+			</Head>
+
+			<section className="section-wide pt-40">
+				<h1 className="heading-section text-center mb-6">
+					Professional Experience
+				</h1>
+				<p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto text-center mb-16">
+					5+ years building scalable web and mobile applications using modern
+					technologies.
+				</p>
+
+				<div className="space-y-6">
+					{experiences.map((experience) => (
+						<div key={experience.title} className="card-elevated">
+							<ExperienceCard experience={experience} />
+						</div>
+					))}
+				</div>
+			</section>
+		</>
 	);
 };
 

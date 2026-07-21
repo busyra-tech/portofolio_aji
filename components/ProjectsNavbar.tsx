@@ -1,37 +1,77 @@
 import { FunctionComponent } from "react";
 import { Category } from "types";
 
-export const NavItem: FunctionComponent<{
+const CATEGORIES: Array<Category | "all"> = [
+	"all",
+	"Laravel",
+	"Adonis Js",
+	"Express Js",
+	"React Js",
+	"Next Js",
+	"Vue Js",
+	"Nuxt Js",
+	"Flutter",
+];
+
+interface NavItemProps {
 	value: Category | "all";
-	handlerFilterCategory: Function;
+	handlerFilterCategory: (category: Category | "all") => void;
 	active: string;
-}> = ({ value, handlerFilterCategory, active }) => {
-	let className = "capitalize cursor-pointer hover:text-gray-400";
-	if (active === value) className += " text-gray-400";
+}
+
+const NavItem: FunctionComponent<NavItemProps> = ({
+	value,
+	handlerFilterCategory,
+	active,
+}) => {
+	const isActive = active === value;
+	const className = `capitalize px-4 py-2 cursor-pointer rounded-full text-sm font-medium transition-all duration-300 ${
+		isActive
+			? "bg-primary-500 text-white shadow-md"
+			: "bg-gray-100 dark:bg-dark-700 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-600"
+	}`;
 
 	return (
-		<li className={className} onClick={() => handlerFilterCategory(value)}>
+		<li
+			className={className}
+			onClick={() => handlerFilterCategory(value)}
+			role="button"
+			tabIndex={0}
+			onKeyDown={(e) => {
+				if (e.key === "Enter" || e.key === " ") {
+					handlerFilterCategory(value);
+				}
+			}}
+			aria-pressed={isActive}
+		>
 			{value}
 		</li>
 	);
 };
 
-const ProjectsNavbar: FunctionComponent<{
-	handlerFilterCategory: Function;
+interface ProjectsNavbarProps {
+	handlerFilterCategory: (category: Category | "all") => void;
 	active: string;
-}> = (props) => {
+}
+
+const ProjectsNavbar: FunctionComponent<ProjectsNavbarProps> = ({
+	handlerFilterCategory,
+	active,
+}) => {
 	return (
-		<div className="flex px-3 py-2 space-x-3 overflow-x-auto list-none">
-			<NavItem value="all" {...props} />
-			<NavItem value="Laravel" {...props} />
-			<NavItem value="Adonis Js" {...props} />
-			<NavItem value="Express Js" {...props} />
-			<NavItem value="React Js" {...props} />
-			<NavItem value="Next Js" {...props} />
-			<NavItem value="Vue Js" {...props} />
-			<NavItem value="Nuxt Js" {...props} />
-			<NavItem value="Flutter" {...props} />
-		</div>
+		<nav
+			className="flex flex-wrap justify-center gap-3 list-none"
+			aria-label="Project categories"
+		>
+			{CATEGORIES.map((category) => (
+				<NavItem
+					key={category}
+					value={category}
+					handlerFilterCategory={handlerFilterCategory}
+					active={active}
+				/>
+			))}
+		</nav>
 	);
 };
 

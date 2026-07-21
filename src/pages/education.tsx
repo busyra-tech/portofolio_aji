@@ -1,42 +1,53 @@
+import Head from "next/head";
 import CertificateCard from "components/CertificateCard";
 import EducationCard from "components/EducationCard";
 import { certifications, educations } from "data";
+import { siteConfig } from "config/site";
 
 const Education = () => {
 	return (
-		<div className="px-6 overflow-y-scroll" style={{ height: "75vh" }}>
-			<div>
-				<h5 className="mt-3 text-2xl font-bold">Degrees Received</h5>
-				<div className="grid gap-6 my-3 md:grid-cols-1">
-					{educations.map((education) => (
-						<div
-							className="col-span-2 p-2 bg-gray-200 rounded-lg dark:bg-dark-200 md:col-span-1 "
-							key={education.universitas}
-						>
-							<EducationCard education={education} />
-						</div>
-					))}
-				</div>
-			</div>
-			<div>
-				<h5 className="my-3 text-2xl font-bold">Certifications</h5>
-				<div className="px-2 py-2 ">
-					<div className="relative grid grid-cols-12 gap-4 ">
-						{certifications.map((certification) => (
-							<div
-								className="col-span-12 p-2 bg-gray-200 rounded-lg sm:col-span-6 lg:col-span-4 dark:bg-dark-200"
-								key={certification.title}
-							>
-								<CertificateCard
-									certification={certification}
-									key={certification.title}
-								/>
+		<>
+			<Head>
+				<title>
+					{siteConfig.pages.education.title} | {siteConfig.name}
+				</title>
+				<meta
+					name="description"
+					content={siteConfig.pages.education.description}
+				/>
+			</Head>
+
+			<section className="section-wide pt-40">
+				<h1 className="heading-section text-center mb-6">
+					Education & Certifications
+				</h1>
+				<p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto text-center mb-16">
+					My academic background and professional certifications.
+				</p>
+
+				<div className="mb-16">
+					<h2 className="heading-subsection mb-8">Degrees Received</h2>
+					<div className="space-y-6">
+						{educations.map((education) => (
+							<div key={education.universitas} className="card-elevated">
+								<EducationCard education={education} />
 							</div>
 						))}
 					</div>
 				</div>
-			</div>
-		</div>
+
+				<div>
+					<h2 className="heading-subsection mb-8">Certifications</h2>
+					<div className="grid-auto">
+						{certifications.map((certification) => (
+							<div key={certification.title} className="card-elevated">
+								<CertificateCard certification={certification} />
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+		</>
 	);
 };
 
