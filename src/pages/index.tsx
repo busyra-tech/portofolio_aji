@@ -22,11 +22,24 @@ const Home = () => {
 				<div className="mb-16">
 					<h2 className="heading-section text-center mb-8">About Me</h2>
 					<p className="text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto text-center leading-relaxed">
-						I&apos;m a passionate software engineer with expertise in building
-						scalable, maintainable web and mobile applications. With a strong
-						foundation in full-stack development, I combine technical skills
-						with creative problem-solving to deliver solutions that make a real
-						impact.
+						I&apos;m a software engineer with expertise in building
+						scalable, maintainable web and mobile applications. Currently
+						driving software solutions at{" "}
+						<span className="font-semibold text-gray-900 dark:text-white">
+							IBS Group
+						</span>{" "}
+						and operating{" "}
+						<a
+							href="https://busyratech.web.id"
+							target="_blank"
+							rel="noopener noreferrer"
+							className="font-semibold text-primary-600 dark:text-accent-400 hover:underline"
+						>
+							Busyra Tech
+						</a>
+						. With a strong foundation in full-stack development, I combine
+						technical rigor with product craftsmanship to deliver systems that make
+						a real business impact.
 					</p>
 				</div>
 

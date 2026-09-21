@@ -121,9 +121,20 @@ const HeroSection = () => {
 				</h1>
 
 				<p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-8">
-					Building scalable web and mobile applications with modern
-					technologies. Full-stack developer passionate about creating impactful
-					digital solutions.
+					Software Engineer at{" "}
+					<span className="font-semibold text-gray-900 dark:text-white">
+						IBS Group
+					</span>{" "}
+					&amp; Founder of{" "}
+					<a
+						href="https://busyratech.web.id"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="font-semibold text-primary-600 dark:text-accent-400 hover:underline"
+					>
+						Busyra Tech
+					</a>
+					. Building scalable web and mobile applications with modern technologies.
 				</p>
 
 				{/* CTA Buttons */}

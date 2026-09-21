@@ -254,6 +254,28 @@ export const infra: Skill[] = [
 
 export const projects: IProject[] = [
   { 
+    name: "Busyra Tech",
+    description:
+      "Software house and digital agency platform offering custom web applications, mobile development, and enterprise digital transformation services.",
+    image_path: "/images/project/project_busyratech.png",
+    deployed_url: "https://busyratech.web.id",
+    category: ["Next Js", "React Js", "Laravel"],
+    techs: [
+      {
+        Icon: SiNextdotjs,
+        name: "Next JS",
+      },
+      {
+        Icon: SiReact,
+        name: "React JS",
+      },
+      {
+        Icon: SiLaravel,
+        name: "Laravel",
+      },
+    ],
+  },
+  { 
     name: "SIDAS",
     description:
       "Sidas is a monitoring application for office performance control services, employees, ATMs, etc.",
