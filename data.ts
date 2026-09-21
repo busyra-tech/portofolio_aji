@@ -110,13 +110,13 @@ export const certifications: Certification[] = [
 export const experiences: Experience[] = [
   {
     title: "Software Engineer",
-    company: "PT. Cipta Integra Duta",
-    company_url: "https://integra.co.id/",
+    company: "PT. Cipta Integra Duta (IBS Group)",
+    company_url: "https://www.ibsrisk.com/",
     logo_path: "/images/exp/integra.png",
     duration: "June 2020 - Present",
     location: "Jakarta, Indonesia",
     description:
-      "Improving system quality by identifying issues and common patterns, and developing standard operating procedures. Enhancing applications by identifying opportunities for improvement, making recommendations and designing and implementing systems.",
+      "Architecting, developing, and maintaining enterprise insurance applications and digital ecosystems (FITS, Doctrack, IBX, BRIX, LISA). Handling full-stack engineering with Laravel, Next.js, Express.js, Flutter, and AdonisJS, along with CI/CD automation and containerized deployments.",
   },
   {
     title: "Fullstack Developer",

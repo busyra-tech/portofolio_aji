@@ -64,7 +64,7 @@ const Projects = () => {
 						projects.map((project) => (
 							<div
 								key={project.name}
-								className="card-elevated !p-0 overflow-hidden"
+								className="card-elevated !p-0 overflow-hidden animate-fadeIn"
 							>
 								<ProjectCard
 									project={project}

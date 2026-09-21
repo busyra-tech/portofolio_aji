@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { FaGithub, FaLinkedin, FaArrowDown } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaArrowDown, FaDownload } from "react-icons/fa";
 import { siteConfig } from "config/site";
 import Image from "next/image";
 
@@ -127,12 +127,22 @@ const HeroSection = () => {
 				</p>
 
 				{/* CTA Buttons */}
-				<div className="flex flex-col md:flex-row gap-4 justify-center mb-12">
+				<div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
 					<a
 						href={`mailto:${siteConfig.author.email}`}
 						className="btn-primary btn-lg"
 					>
 						Start a Project
+					</a>
+					<a
+						href={siteConfig.resume.url}
+						download={siteConfig.resume.filename}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="btn-secondary btn-lg flex items-center justify-center gap-2 border border-primary-500/30 text-primary-600 dark:text-primary-400 hover:border-primary-500"
+					>
+						<FaDownload className="w-4 h-4" />
+						<span>Download CV</span>
 					</a>
 					<a
 						href={siteConfig.socials.github}

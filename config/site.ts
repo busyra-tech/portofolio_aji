@@ -7,8 +7,10 @@ export const siteConfig = {
 	name: process.env.NEXT_PUBLIC_SITE_NAME || "Aji Dwi Saputra",
 	description:
 		process.env.NEXT_PUBLIC_SITE_DESCRIPTION || "Software Engineer Portfolio",
-	url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-	ogImage: "https://via.placeholder.com/1200x630",
+	url: process.env.NEXT_PUBLIC_SITE_URL || "https://ajidwisaputra.com",
+	ogImage:
+		process.env.NEXT_PUBLIC_OG_IMAGE ||
+		"https://ajidwisaputra.com/images/og-image.png",
 
 	author: {
 		name: process.env.NEXT_PUBLIC_AUTHOR_NAME || "Aji Dwi Saputra",
