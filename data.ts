@@ -127,7 +127,7 @@ export const experiences: Experience[] = [
     duration: "July 2019 - May 2020",
     location: "South Tanggerang, Indonesia",
     description:
-      "Full Stack Developers are computer programmers who are proficient in both front and back end coding. Their primary responsibilities include designing user interactions on websites, developing servers and databases for website functionality and coding for mobile platforms.",
+      "Developed and maintained end-to-end web and mobile applications using React, Vue.js, Express, and Laravel. Designed database schemas, built resilient RESTful APIs, and collaborated with cross-functional teams to deliver client-facing digital products.",
   },
   {
     title: "IT Support",
@@ -138,7 +138,7 @@ export const experiences: Experience[] = [
     duration: "Sept 2018 - June 2019",
     location: "Cirebon, Indonesia",
     description:
-      "IT technical support officers monitor and maintain the computer systems and networks of an organisation. You will be installing and configuring computer systems, diagnosing hardware and software faults and solving technical and applications problems, either over the phone or in person.",
+      "Managed network infrastructure, server configurations, and system troubleshooting. Streamlined internal IT operations and ensured 99%+ uptime for core business operations.",
   },
   {
     title: "Software Developer",
@@ -148,7 +148,7 @@ export const experiences: Experience[] = [
     duration: "May 2018 - Aug 2018",
     location: "Jakarta, Indonesia",
     description:
-      "Researching, designing, implementing and managing software programs. Testing and evaluating new programs. Identifying areas for modification in existing programs and subsequently developing these modifications. Writing and implementing efficient code.",
+      "Engineered core application modules for laundry management systems, conducted functional testing, and implemented feature enhancements to improve operational workflow.",
   },
 ]
 
