@@ -1,14 +1,16 @@
 import { useState } from "react";
 import Head from "next/head";
 import ProjectCard from "components/ProjectCard";
+import ProjectModal from "components/ProjectModal";
 import ProjectsNavbar from "components/ProjectsNavbar";
 import { projects as projectsData } from "data";
-import { Category } from "types";
+import { Category, IProject } from "types";
 import { siteConfig } from "config/site";
 
 const Projects = () => {
 	const [projects, setProjects] = useState(projectsData);
 	const [active, setActive] = useState("all");
+	const [selectedProject, setSelectedProject] = useState<IProject | null>(null);
 
 	const handleFilterCategory = (category: Category | "all") => {
 		if (category === "all") {
@@ -60,8 +62,14 @@ const Projects = () => {
 				<div className="grid-auto">
 					{projects.length > 0 ? (
 						projects.map((project) => (
-							<div key={project.name} className="card-elevated">
-								<ProjectCard project={project} />
+							<div
+								key={project.name}
+								className="card-elevated !p-0 overflow-hidden"
+							>
+								<ProjectCard
+									project={project}
+									onSelect={(proj) => setSelectedProject(proj)}
+								/>
 							</div>
 						))
 					) : (
@@ -72,6 +80,14 @@ const Projects = () => {
 						</div>
 					)}
 				</div>
+
+				{/* Modal outside transformed containing block */}
+				{selectedProject && (
+					<ProjectModal
+						project={selectedProject}
+						onClose={() => setSelectedProject(null)}
+					/>
+				)}
 			</section>
 		</>
 	);
