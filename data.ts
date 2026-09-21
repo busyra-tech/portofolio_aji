@@ -9,24 +9,25 @@ export const services: Service[] = [
     Icon: RiComputerLine,
     title: "Frontend Development",
     about:
-      "I can build a beautiful and responsive website frontend using <b>React-NEXT</b> or <b>Vue-NUXT</b>",
+      "Architecting fast, responsive, and accessible user interfaces using <b>Next.js</b>, <b>React</b>, and <b>Vue/Nuxt</b> with modern design systems.",
   },
   {
     Icon: FaServer,
-    title: "Backend  Development",
+    title: "Backend & API Systems",
     about:
-      "handle database, server, api using <b>Express </b><b>Laravel </b> & other popular frameworks",
+      "Designing resilient RESTful APIs, database schemas, and microservices using <b>Laravel</b>, <b>Express.js</b>, and <b>AdonisJS</b>.",
   },
   {
     Icon: MdDeveloperMode,
-    title: "Mobile Development",
-    about: "Developing mobile hybrid platfrom using <b>Flutter</b> or <b>React Native</b>",
+    title: "Mobile Engineering",
+    about:
+      "Building high-performance cross-platform mobile applications using <b>Flutter</b> and <b>React Native</b> for iOS and Android.",
   },
   {
     Icon: FaCloud,
-    title: "Cloud Infra-Architecture",
+    title: "Cloud & DevOps Architecture",
     about:
-      "maintaining websites on virtual machine instances and setting up CI/CD with <b>Jenkins</b>",
+      "Automating CI/CD pipelines with <b>Jenkins</b>, containerizing applications via <b>Docker</b>, and managing scalable VPS/cloud infrastructure.",
   },
 ];
 
