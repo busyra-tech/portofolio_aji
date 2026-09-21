@@ -1,7 +1,7 @@
 import { RiComputerLine } from "react-icons/ri";
 import { FaCloud, FaServer } from "react-icons/fa";
 import { MdDeveloperMode } from "react-icons/md";
-import { SiAdonisjs, SiAmazonaws, SiCodeigniter, SiDigitalocean, SiDjango, SiDocker, SiFirebase, SiFlutter, SiJenkins, SiLaravel, SiMongodb, SiMysql, SiNextdotjs, SiNodedotjs, SiNuxtdotjs, SiPostgresql, SiPython, SiReact, SiVuedotjs } from "react-icons/si";
+import { SiAdonisjs, SiAmazonaws, SiCodeigniter, SiDigitalocean, SiDjango, SiDocker, SiFirebase, SiFlutter, SiGit, SiJenkins, SiLaravel, SiLinux, SiMongodb, SiMysql, SiNextdotjs, SiNginx, SiNodedotjs, SiNuxtdotjs, SiPostgresql, SiPostman, SiPython, SiReact, SiRedis, SiTailwindcss, SiTypescript, SiVuedotjs } from "react-icons/si";
 import { Certification, Education, Experience, IProject, Service, Skill } from "./types";
 
 export const services: Service[] = [
@@ -151,46 +151,16 @@ export const experiences: Experience[] = [
   },
 ]
 
-export const languages: Skill[] = [
-  {
-    Icon: SiReact,
-    name: "React Js",
-    level: "85",
-  },
+export const frontendSkills: Skill[] = [
   {
     Icon: SiNextdotjs,
-    name: "Next Js",
+    name: "Next.js",
+    level: "92",
+  },
+  {
+    Icon: SiReact,
+    name: "React.js",
     level: "90",
-  },
-  {
-    Icon: SiVuedotjs,
-    name: "Vue Js",
-    level: "80",
-  },
-  {
-    Icon: SiNuxtdotjs,
-    name: "Nuxt Js",
-    level: "85",
-  },
-  {
-    Icon: SiLaravel,
-    name: "Laravel",
-    level: "95",
-  },
-  {
-    Icon: SiCodeigniter,
-    name: "Codeigniter",
-    level: "75",
-  },
-  {
-    Icon: SiNodedotjs,
-    name: "Express Js",
-    level: "85",
-  },
-  {
-    Icon: SiAdonisjs,
-    name: "Adonis Js",
-    level: "75",
   },
   {
     Icon: SiFlutter,
@@ -198,59 +168,113 @@ export const languages: Skill[] = [
     level: "90",
   },
   {
-    Icon: SiPython,
-    name: "Python",
-    level: "60",
+    Icon: SiTypescript,
+    name: "TypeScript",
+    level: "88",
   },
   {
-    Icon: SiDjango,
-    name: "Django",
-    level: "65",
+    Icon: SiVuedotjs,
+    name: "Vue.js & Nuxt.js",
+    level: "85",
+  },
+  {
+    Icon: SiTailwindcss,
+    name: "Tailwind CSS",
+    level: "92",
   },
 ];
 
-export const infra: Skill[] = [
+export const backendSkills: Skill[] = [
   {
-    Icon: SiAmazonaws,
-    name: "Amazon Aws",
-    level: "65",
+    Icon: SiLaravel,
+    name: "Laravel",
+    level: "95",
   },
   {
-    Icon: SiJenkins,
-    name: "Jenkins",
-    level: "90",
+    Icon: SiNodedotjs,
+    name: "Express.js & Node",
+    level: "88",
   },
   {
-    Icon: SiDigitalocean,
-    name: "Digital Ocean",
+    Icon: SiAdonisjs,
+    name: "AdonisJS",
     level: "85",
   },
   {
-    Icon: SiFirebase,
-    name: "Firebase",
-    level: "80",
-  },
-  {
-    Icon: SiMysql,
-    name: "Mysql",
+    Icon: SiPostman,
+    name: "RESTful API & Microservices",
     level: "90",
   },
   {
-    Icon: SiPostgresql,
-    name: "Postgresql",
-    level: "85",
-  },
-  {
-    Icon: SiMongodb,
-    name: "Mongo Db",
+    Icon: SiCodeigniter,
+    name: "CodeIgniter",
     level: "80",
   },
   {
-    Icon: SiDocker,
-    name: "Docker",
+    Icon: SiPython,
+    name: "Python & Django",
     level: "75",
   },
 ];
+
+export const databaseSkills: Skill[] = [
+  {
+    Icon: SiPostgresql,
+    name: "PostgreSQL",
+    level: "90",
+  },
+  {
+    Icon: SiMysql,
+    name: "MySQL",
+    level: "92",
+  },
+  {
+    Icon: SiRedis,
+    name: "Redis Caching",
+    level: "82",
+  },
+  {
+    Icon: SiMongodb,
+    name: "MongoDB",
+    level: "80",
+  },
+  {
+    Icon: SiFirebase,
+    name: "Firebase Suite",
+    level: "85",
+  },
+];
+
+export const devopsSkills: Skill[] = [
+  {
+    Icon: SiJenkins,
+    name: "Jenkins (CI/CD Pipelines)",
+    level: "92",
+  },
+  {
+    Icon: SiDocker,
+    name: "Docker Containers",
+    level: "88",
+  },
+  {
+    Icon: SiGit,
+    name: "Git & Version Control",
+    level: "95",
+  },
+  {
+    Icon: SiLinux,
+    name: "Linux VPS & Nginx",
+    level: "86",
+  },
+  {
+    Icon: SiDigitalocean,
+    name: "Cloud (AWS & DigitalOcean)",
+    level: "82",
+  },
+];
+
+export const languages: Skill[] = [...frontendSkills, ...backendSkills];
+export const infra: Skill[] = [...databaseSkills, ...devopsSkills];
 
 export const projects: IProject[] = [
   { 
